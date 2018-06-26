@@ -1,6 +1,5 @@
 import {ADD_COMMENT} from './actions';
-import {ADD_COMMENT} from './actions';
-
+import {REMOVE_COMMENT} from './actions';
 
 const initialState = {
     comments: [],
@@ -18,7 +17,11 @@ function reducer(state = initialState, action) {
                     votes: 0
                 }
                 , ...state]
-            })
+            });
+        case REMOVE_COMMENT:
+            return Object.assign({}, state, {
+                comments: state.comments.filter(comment => comment.id !== action.id)
+            });
         default:
             return state;
     }
