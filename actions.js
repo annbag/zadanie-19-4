@@ -6,35 +6,6 @@ export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
-{
-	type: ADD_COMMENT,
-	id: 1,
-	text: 'My first comment!' 
-}
-
-{
-	type: EDIT_COMMENT,
-	id: 2,
-	text: 'Edit text'
-}
-
-{
-	type: REMOVE_COMMENT,
-	id: 19,
-}
-
-{
-	type: THUMB_UP_COMMENT,
-	id: 13,
-	thumbs: 3,
-}
-
-{
-	type: THUMB_DOWN_COMMENT,
-	id: 14,
-	thumbs: -4,
-}
-
 function addComment(text) {
 	return {
 		type: ADD_COMMENT,
@@ -43,7 +14,7 @@ function addComment(text) {
 	}
 }
 
-function editComment(text) {
+function editComment(id) {
 	return {
 		type: EDIT_COMMENT,
 		text,
@@ -58,7 +29,7 @@ function removeComment(id) {
 	}
 }
 
-function thumbUpComment(thumbs) {
+function thumbUpComment(id) {
 	return {
 		type: THUMB_UP_COMMENT,
 		thumbs,
@@ -66,7 +37,7 @@ function thumbUpComment(thumbs) {
 	}
 }
 
-function thumbDownComment(thumbs) {
+function thumbDownComment(id) {
 	return {
 		type: THUMB_DOWN_COMMENT,
 		thumbs,
