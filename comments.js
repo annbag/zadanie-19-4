@@ -18,12 +18,11 @@ function comments(state = [], action) {
                 text: action.text
                 votes: 0
             }
-            , ...state];
-            };
-        case EDIT_COMMENT:
-        	return state.filter(comment => comment.id !== action.id);
+            , ...state];    
         case REMOVE_COMMENT:
-            return state.filter(comment => comment.id !== action.id);
+            return state.filter(comment => comment.id !== action.id);    
+        case EDIT_COMMENT:
+        	return state.filter(comment => comment.id !== action.id);        
         case THUMB_UP_COMMENT;
         	return state.filter(comment => comment.id !== action.id);
         case THUMB_DOWN_COMMENT;
@@ -31,4 +30,4 @@ function comments(state = [], action) {
         default:
             return state;
     }
-}
+};

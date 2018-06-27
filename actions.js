@@ -50,6 +50,3 @@ const boundEditComment = text => dispatch(editComment(text));
 const boundRemoveComment = text => dispatch(removeComment(id));
 const boundThumbUpComment = text => dispatch(thumbUpComment(thumbs));
 const boundThumbDownComment = text => dispatch(thumbDownComment(thumbs));
-
-boundAddComment('New comment!');
-boundThumbUpComment(15);
